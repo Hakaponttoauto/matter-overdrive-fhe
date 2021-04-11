@@ -31,7 +31,7 @@ public class MatterOverdriveWorld {
 
     public MatterOverdriveWorld(ConfigurationHandler configurationHandler) {
         worldGen = new MOWorldGen();
-        dimensionalRifts = new DimensionalRifts(1);
+        dimensionalRifts = new DimensionalRifts(0.013f);
         configurationHandler.subscribe(worldGen);
     }
 

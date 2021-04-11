@@ -91,9 +91,13 @@ public class ComponentPowerGeneration extends MachineComponentAbstract<TileEntit
             manageServerLightning();
             manageCharge();
             managePowerGeneration();
+            manageEnergyExtract();
         }
     }
 
+    private void manageEnergyExtract() {
+        //TODO, idk what is the best way to manage energy extraction
+    }
 
     public void managePowerGeneration() {
         float dimValue = machine.getDimensionalValue();

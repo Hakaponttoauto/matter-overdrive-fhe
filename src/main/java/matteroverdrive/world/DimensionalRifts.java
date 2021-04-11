@@ -37,8 +37,8 @@ public class DimensionalRifts {
 
     public float getValueAt(Vec3d pos) {
         if (Minecraft.getMinecraft().world != null) {
-            float yPos = (float) MOMathHelper.noise(pos.x * noiseScale, Minecraft.getMinecraft().world.provider.getSeed(), pos.z * noiseScale);
-            yPos = MathHelper.clamp((float) Math.pow((yPos - 0.45f), 5) * 180, 0, 1);
+            float yPos = (float) MOMathHelper.noise(pos.x * noiseScale, pos.z * noiseScale, Minecraft.getMinecraft().world.provider.getSeed());
+            yPos = MathHelper.clamp((float) Math.pow((yPos*2 + 0.5), 7), 0, 1);
             return yPos;
         }
         return 0;
